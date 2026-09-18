@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Iniciante - Estrutura do Cartão</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #1e1e2f; color: #f0f0f0; text-align: center; padding: 20px; }
+        .container { background: #2b2b3d; padding: 30px; width: 680px; margin: auto; border-radius: 12px; box-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
+        h1 { margin-bottom: 10px; color: #a5b4fc; }
+        .subtitulo { font-size: 0.95rem; color: #cccccc; margin-bottom: 25px; }
+        .pergunta { text-align: left; margin-bottom: 20px; padding: 12px; border-left: 3px solid #a5b4fc; background-color: #242436; border-radius: 6px; }
+        .pergunta p { font-weight: bold; }
+        code { color: #a5b4fc; background-color: #1e1e2f; padding: 2px 5px; border-radius: 4px; }
+        button { padding: 10px 20px; background-color: #a5b4fc; color: #1e1e2f; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #818cf8; transform: translateY(-2px); }
+        #resultado { font-weight: bold; margin-top: 20px; color: #a5b4fc; }
+        #linkRespostas { margin-top: 15px; word-break: break-all; }
+        #linkRespostas a { color: #a5b4fc; font-weight: bold; }
+        .correto { color: #00ff7f; font-weight: bold; }
+        .errado { color: #ff4040; font-weight: bold; }
+        .neutro { color: #ffd166; font-weight: bold; }
+        @media (max-width: 720px) { .container { width: 90%; padding: 20px; } }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Quiz Iniciante - HTML e CSS Básicos</h1>
+        <p class="subtitulo">Teste seus conhecimentos sobre as tags e propriedades usadas no Cartão Digital.</p>
+
+        <form id="quizForm">
+
+            <div class="pergunta" id="q1box">
+                <p>1) No index.html, qual tag foi utilizada para escrever o título principal "Dr. Rafael Almeida"?</p>
+                <label><input type="radio" name="q1" value="a"> <code>&lt;p&gt;</code></label><br>
+                <label><input type="radio" name="q1" value="b"> <code>&lt;h1&gt;</code></label><br>
+                <label><input type="radio" name="q1" value="c"> <code>&lt;title&gt;</code></label><br>
+                <label><input type="radio" name="q1" value="d"> <code>&lt;h2&gt;</code></label>
+            </div>
+
+            <div class="pergunta" id="q2box">
+                <p>2) Qual é a finalidade do trecho <code>&lt;img src="tatila.png" class="foto"&gt;</code> no projeto?</p>
+                <label><input type="radio" name="q2" value="a"> Carregar a imagem de fundo do cartão digital.</label><br>
+                <label><input type="radio" name="q2" value="b"> Criar um botão que leva o usuário para as fotos.</label><br>
+                <label><input type="radio" name="q2" value="c"> Ocultar uma imagem na tela principal.</label><br>
+                <label><input type="radio" name="q2" value="d"> Exibir a foto de perfil arredondada do advogado.</label>
+            </div>
+
+            <div class="pergunta" id="q3box">
+                <p>3) Em <code>style.css</code>, qual o efeito de aplicar <code>background: #d7d7d7;</code> no seletor <code>body</code>?</p>
+                <label><input type="radio" name="q3" value="a"> Define uma cor de fundo cinza clara para toda a página web.</label><br>
+                <label><input type="radio" name="q3" value="b"> Aplica uma cor dourada no texto.</label><br>
+                <label><input type="radio" name="q3" value="c"> Coloca uma borda ao redor de todos os elementos.</label><br>
+                <label><input type="radio" name="q3" value="d"> Faz o cartão digital desaparecer.</label>
+            </div>
+
+            <div class="pergunta" id="q4box">
+                <p>4) O que acontece quando o usuário clica em <code>&lt;button onclick="abrirServicos()"&gt;</code>?</p>
+                <label><input type="radio" name="q4" value="a"> O navegador é fechado automaticamente.</label><br>
+                <label><input type="radio" name="q4" value="b"> Uma nova guia do Google Maps é aberta.</label><br>
+                <label><input type="radio" name="q4" value="c"> A função Javascript "abrirServicos()" é acionada.</label><br>
+                <label><input type="radio" name="q4" value="d"> O CSS da página é deletado.</label>
+            </div>
+
+            <div class="pergunta" id="q5box">
+                <p>5) Qual é o propósito da tag <code>&lt;i class="fa-solid fa-phone"&gt;&lt;/i&gt;</code>?</p>
+                <label><input type="radio" name="q5" value="a"> Exibir um ícone de telefone através da biblioteca Font Awesome.</label><br>
+                <label><input type="radio" name="q5" value="b"> Inserir um texto em itálico com a palavra "phone".</label><br>
+                <label><input type="radio" name="q5" value="c"> Criar uma imagem com a extensão .png.</label><br>
+                <label><input type="radio" name="q5" value="d"> Fazer o celular vibrar quando clicado.</label>
+            </div>
+
+            <div class="pergunta" id="q6box">
+                <p>6) O link de e-mail usa o formato <code>href="mailto:contato@advocacia.com"</code>. O que isso faz?</p>
+                <label><input type="radio" name="q6" value="a"> Direciona para um site chamado "mailto.com".</label><br>
+                <label><input type="radio" name="q6" value="b"> Cria uma caixa de alerta no navegador.</label><br>
+                <label><input type="radio" name="q6" value="c"> Abre o aplicativo padrão de e-mail do usuário já preenchido.</label><br>
+                <label><input type="radio" name="q6" value="d"> Envia um e-mail automaticamente sem o usuário clicar.</label>
+            </div>
+
+            <div class="pergunta" id="q7box">
+                <p>7) Qual propriedade no CSS transforma a imagem quadrada de perfil em um círculo?</p>
+                <label><input type="radio" name="q7" value="a"> <code>object-fit: cover;</code></label><br>
+                <label><input type="radio" name="q7" value="b"> <code>border-radius: 100px;</code></label><br>
+                <label><input type="radio" name="q7" value="c"> <code>border: 5px solid;</code></label><br>
+                <label><input type="radio" name="q7" value="d"> <code>background-size: center;</code></label>
+            </div>
+
+            <div class="pergunta" id="q8box">
+                <p>8) No HTML, para que serve a tag <code>&lt;title&gt;</code> localizada no <code>&lt;head&gt;</code>?</p>
+                <label><input type="radio" name="q8" value="a"> Para escrever o título principal dentro do cartão digital.</label><br>
+                <label><input type="radio" name="q8" value="b"> Para aplicar estilos CSS.</label><br>
+                <label><input type="radio" name="q8" value="c"> Para criar botões no final da tela.</label><br>
+                <label><input type="radio" name="q8" value="d"> Para definir o texto que aparece na aba do navegador.</label>
+            </div>
+
+            <div class="pergunta" id="q9box">
+                <p>9) A classe <code>.cartao</code> possui <code>width: 390px;</code>. O que isso indica?</p>
+                <label><input type="radio" name="q9" value="a"> O cartão tem uma largura fixa de 390 pixels em telas maiores.</label><br>
+                <label><input type="radio" name="q9" value="b"> O cartão será 390 vezes maior que a tela.</label><br>
+                <label><input type="radio" name="q9" value="c"> A altura máxima do site será de 390 pixels.</label><br>
+                <label><input type="radio" name="q9" value="d"> O peso do arquivo será de 390 KB.</label>
+            </div>
+
+            <div class="pergunta" id="q10box">
+                <p>10) Como o arquivo HTML está conectando os estilos externos?</p>
+                <label><input type="radio" name="q10" value="a"> Usando <code>&lt;style src="style.css"&gt;</code>.</label><br>
+                <label><input type="radio" name="q10" value="b"> Através da tag <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</label><br>
+                <label><input type="radio" name="q10" value="c"> Através da tag <code>&lt;script src="style.css"&gt;</code>.</label><br>
+                <label><input type="radio" name="q10" value="d"> Inserindo os estilos direto na tag <code>&lt;body&gt;</code>.</label>
+            </div>
+
+            <button type="button" onclick="corrigir()">Enviar Respostas</button>
+        </form>
+
+        <p id="resultado"></p>
+        <p id="linkRespostas"></p>
+    </div>
+
+    <script>
+        function corrigir() {
+            // Gabarito embaralhado intencionalmente
+            const respostasCorretas = {
+                q1: "b", q2: "d", q3: "a", q4: "c", q5: "a",
+                q6: "c", q7: "b", q8: "d", q9: "a", q10: "b"
+            };
+
+            let pontos = 0;
+            const total = Object.keys(respostasCorretas).length;
+            const form = document.getElementById("quizForm");
+            let params = [];
+
+            for (const q in respostasCorretas) {
+                const box = document.getElementById(q + "box");
+                const antigo = box.querySelector(".feedback");
+                if (antigo) antigo.remove();
+
+                const marcado = form.querySelector(`input[name="${q}"]:checked`);
+                const respostaAluno = marcado ? marcado.value : "nao_respondeu";
+                const acertou = respostaAluno === respostasCorretas[q];
+
+                if (acertou) pontos++;
+
+                params.push(`${q}=${respostaAluno}`);
+                params.push(`${q}_status=${acertou ? "correto" : "errado"}`);
+
+                const feedback = document.createElement("p");
+                feedback.classList.add("feedback");
+
+                if (respostaAluno === "nao_respondeu") {
+                    feedback.textContent = "⚠️ Você não marcou nenhuma alternativa.";
+                    feedback.classList.add("neutro");
+                } else if (acertou) {
+                    feedback.textContent = "✅ Correto!";
+                    feedback.classList.add("correto");
+                } else {
+                    let respostaCorretaTexto = "";
+                    const inputs = box.querySelectorAll("label input");
+                    inputs.forEach(input => {
+                        if (input.value === respostasCorretas[q]) {
+                            respostaCorretaTexto = input.parentNode.textContent.trim();
+                        }
+                    });
+                    feedback.textContent = `❌ Errado. A resposta correta é: ${respostaCorretaTexto}`;
+                    feedback.classList.add("errado");
+                }
+                box.appendChild(feedback);
+            }
+
+            document.getElementById("resultado").textContent = `Você acertou ${pontos} de ${total} questões.`;
+            params.push(`pontos=${pontos}`);
+            params.push(`total=${total}`);
+
+            const urlBase = window.location.origin + window.location.pathname;
+            const link = urlBase + "?" + params.join("&");
+            document.getElementById("linkRespostas").innerHTML = `🔗 Link com respostas e status:<br><a href="${link}" target="_blank">${link}</a>`;
+        }
+    </script>
+</body>
+</html>
